@@ -1,0 +1,12 @@
+ProteinId,ProteinLength,DomainSystem,DomainId,DomainStart,DomainStop,InterproId,InterproName,SimilarSystem,SimilarId,DomainComment,,Publications,Ligands
+NP_066243.1,739,CDD,CDD:147601,19,734,IPR008609,Ebola nucleoprotein,Pfam,PF05505,Ebola nucleoprotein,,20,2
+NP_066244.1,340,CDD,CDD:145320,20,340,IPR002953,Filoviridae VP35 protein,Pfam,PF02097,Filoviridae VP35,,20,0
+NP_066245.1,326,CDD,CDD:116068,1,295,IPR008986,EV matrix protein,Pfam,PF07447,Matrix protein VP40,,29,11
+NP_066246.1,676,CDD,CDD:110602,15,372,IPR002561,Filoviruses glycoprotein,Pfam,PF01611,Filovirus glycoprotein,,20,2
+NP_066246.1,676,CDD,CDD:197367,557,629,IPR014625,Filoviruses glycoprotein,Gene3D,G3DSA:1.10.287.210,"heptad repeat 1-heptad repeat 2 region of the transmembrane subunit of Filoviridae viruses, Ebola virus and Marburg virus, and related domains",,104,112
+NP_066247.1,364,CDD,CDD:110602,15,364,IPR002561,Filoviruses glycoprotein,Pfam,PF01611,Filovirus glycoprotein,,20,2
+NP_066248.1,297,CDD,CDD:110602,15,295,IPR002561,Filoviruses glycoprotein,Pfam,PF01611,Filovirus glycoprotein,,20,2
+NP_066249.1,288,CDD,CDD:151944,142,271,IPR014459,Minor nucleoprotein VP30,Pfam,PF11507,Ebola virus-specific transcription factor VP30,,20,0
+NP_066250.1,251,CDD,CDD:253701,9,232,IPR009433,Filovirus membrane-associated VP24,Pfam,PF06389,Filovirus membrane-associated protein VP24,,20,0
+NP_066251.1,2212,CDD,CDD:250248,10,1091,IPR014023,Mononegavirales RNA-directed RNA polymerase catalytic domain,Pfam,PF00946,Mononegavirales RNA dependent RNA polymerase,,20,0
+NP_066251.1,2212,CDD,CDD:234496,1215,2204,IPR026890,Mononegavirales mRNA-capping domain V,TIGRFAM,TIGR04198,"mRNA capping enzyme, paramyxovirus family",,20,0

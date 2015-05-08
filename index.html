@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+	<!-- Mobile viewport optimized -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="Maulik R. Kamdar">
+    <meta name="author" content="Michel Dumontier">
+    <meta name="keywords" content="Ebola, Virus, Filovirus, Linked Data, Visualization, Semantic, Web, Technology, Genomics, Data, Information" />
+	<!-- Title -->
+	<title>Bio2RDF Ebola Virus Knowledgebase</title>
+	<!-- Stylesheet -->	
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/slider.css" type="text/css">
+	<script type="text/javascript" src="js/libraries/jquery.js"></script>
+	<script type="text/javascript" src="js/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/libraries/kinetic.min.js"></script>
+    <script type="text/javascript" src="js/libraries/sigma.min.js"></script>
+    <script type="text/javascript" src="js/libraries/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/libraries/sigma.forceatlas2.js"></script>
+	<script type="text/javascript" src="js/utils.js"></script>
+	<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-62283315-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>	
+</head>
+
+<body>
+	<div class="navbar navbar-inverse">
+		<div class="navbar-inner">
+		        <div class="container-fluid">
+          			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          				<span class="icon-bar"></span>
+           				<span class="icon-bar"></span>
+           				<span class="icon-bar"></span>
+         			</button>
+          			<a class="brand" href="#">Bio2RDF Ebola Virus Knowledgebase</a>
+          			<div class="nav-collapse collapse">
+            				<ul class="nav">
+             					
+                                <li><a href="https://github.com/bio2rdf/bio2rdf-scripts/wiki" target="_blank">About Bio2RDF</a></li>
+                                <li><a href="data/ebola.ttl" target="_blank">Download Ebola Virus Knowledgebase</a></li>
+                                <li><a href="http://ebola-sparql.semanticscience.org/sparql/" target="_blank">SPARQL Endpoint</a></li>
+              					<li><a href="https://groups.google.com/forum/#!forum/bio2rdf" target="_blank">Contact</a></li>
+            				</ul>
+          			</div><!--/.nav-collapse -->
+        		</div>
+      		</div>
+    	</div>
+
+	<div class="container-fluid">
+		<div class="row-fluid">
+            <div class="span4" id="genomicsDiv">
+                <div class="tabbable" id="genomics">
+                    <ul class="nav nav-tabs" id="ebovtabIds">
+                        <li class="active"><a href="#genes_container" data-toggle="tab">Ebola Virus Genomic Information</a></li>
+                        <li><a href="#offsetDiv" data-toggle="tab">Genome Wheel</a></li>
+                    </ul>
+                    <div class="tab-content" id="tabContents">
+                        <div id="genes_container" class="tab-pane active fade in"></div>
+                        <div id="offsetDiv" align="center" class="tab-pane fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="span4" id="goTermsDiv">
+                <div class="tabbable" id="goTerms">
+                    <ul class="nav nav-tabs" id="tabIds">
+                        <li class="active"><a href="#goTerms_container" data-toggle="tab">Annotations</a></li>
+                        <li><a href="#specgoTerms_container" data-toggle="tab"><span id="specgoTerms"></span></a></li>
+                    </ul>
+                    <div class="tab-content" id="tabContents">
+                        <div id="goTerms_container" class="tab-pane active fade in"></div>
+                        <div id="specgoTerms_container" class="tab-pane fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="span4" id="threedDiv">
+                <div class="tabbable" id="threedtabs">
+                    <ul class="nav nav-tabs" id="tabIds">
+                        <li class="active"><a href="#threed" data-toggle="tab">3D Molecular Structure View</a></li>
+                    </ul>
+                    <div class="tab-content" id="tabContents">
+                        <span id="threedId"></span>
+                        <div id="threedStructsdf" style="background-color: black;"></div>
+                        <textarea wrap='off' id='threedStructsdf_src' style='display: none;'></textarea>
+                    </div>
+                </div>
+            </div>
+		</div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span4" id="publicationsDiv">
+                <div class="tabbable" id="publications">
+                    <ul class="nav nav-tabs" id="publicationstabIds">
+                        <li class="active"><a href="#publications_container" data-toggle="tab">Publications</a></li>
+                        <li><a href="#specpublications_container" data-toggle="tab"><span id="specpublications"></span></a></li>
+                    </ul>
+                    <div class="tab-content" id="tabContents">
+                        <div id="publications_container" class="tab-pane active fade in"></div>
+                        <div id="specpublications_container" class="tab-pane fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="span4" id="publicationsViz">
+                <div class="tabbable" id="networktabs">
+                    <ul class="nav nav-tabs" id="tabIds">
+                        <li class="active"><a href="#pubVizOffset" data-toggle="tab">MeSH Terms View</a></li>
+                    </ul>
+                    <div class="tab-content" id="sigmaViz-parent">
+                        <div id="sigmaViz" class="sigmaViz"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="span4" id="chemicalsDiv">
+                <div class="tabbable" id="chemicals">
+                    <ul class="nav nav-tabs" id="ligandstabIds">
+                        <li class="active"><a href="#ligands_container" data-toggle="tab">Ligands</a></li>
+                        <li><a href="#specligands_container" data-toggle="tab"><span id="specligands"></span></a></li>
+                    </ul>
+                    <div class="tab-content" id="tabContents">
+                        <div id="ligands_container" class="tab-pane active fade in"></div>
+                        <div id="specligands_container" class="tab-pane fade"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <div class="splashScreenExplorer">
+  		<img src="img/loading-animation.gif"><img src="img/tcga_logo.png"><br>
+  		<h2 align="center">Simulating. One moment please…</h2>
+    </div>
+	
+    <script src="js/ebolaGenomeParser.js"></script>
+    <script src="js/ebolaGui.js"></script>
+    <script src="js/ebolaGenomeWheel.js"></script>
+    <script src="js/sigmaforce.js"></script>
+    <script type="text/javascript" src="js/libraries/Three49custom.js"></script>
+    <script type="text/javascript" src="js/libraries/GLmol.js"></script>
+</body></html>

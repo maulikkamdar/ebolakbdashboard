@@ -1,0 +1,10 @@
+ProteinId,Start,Stop,ProteinName,ProteinDescription,Publications,Ligands
+NP_066243.1,470,2689,NP Nucleoprotein,encapsidation of genomic RNA,120,141
+NP_066244.1,3129,4151,VP35 Polymerase Complex Protein,polymerase complex protein,45,589
+NP_066245.1,4479,5459,VP40 Matrix Protein,,29,420
+NP_066246.1,6039,8068,GP Spike Glycoprotein,receptor binding and fusion; virion spike glycoprotein precursor; an addition A residue is inserted during transcription; encodes two disulfide linked subunits GP1 and GP2,40,0
+NP_066247.1,6039,7133,GP Small Secreted Glycoprotein,sGP; small non-structural secreted glycoprotein; sGP secreted as a anti-parallel oriented homodimer,33,23
+NP_066248.1,6039,6933,GP Second Secreted Glycoprotein,ssGP; second non-structural secreted glycoprotein; secreted in a monomeric form; one A residue is deleted or two additional A residues are inserted at the editing site during transcription of the GP gene,20,16
+NP_066249.1,8509,9375,VP30 Minor Nucleoprotein,minor nucleoprotein; polymerase complex protein,44,592
+NP_066250.1,10345,11000,VP24 Membrane-associated Protein,membrane-associated protein,42,515
+NP_066251.1,11581,18219,L RNA-dependent RNA polymerase,synthesis of viral RNAs; transcriptional RNA editing; polymerase,100,959
