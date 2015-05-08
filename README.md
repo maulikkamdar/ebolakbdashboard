@@ -8,15 +8,16 @@ The EBOV Genomic information, Genome Wheel, relevant associated PubMed Publicati
 The online version is available at http://ebola.semanticscience.org/ 
 
 **Requirements**
-Apache 2 Server
-PHP5 support
-Ebola-KB SPARQL Endpoint
+* Apache 2 Server
+* PHP5 support
+* Ebola-KB SPARQL Endpoint
 
 **Libraries**
-jQuery
-Bootstrap
-D3JS
-SigmaJS
+* jQuery
+* Bootstrap
+* D3JS
+* SigmaJS
+* GLMol Molecular Viewer (ThreeJS)
 
 **Contact**
 maulikrk@stanford.edu
